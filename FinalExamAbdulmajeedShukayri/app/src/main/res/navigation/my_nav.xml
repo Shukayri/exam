@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/home_Screen">
+
+    <fragment
+        android:id="@+id/home_Screen"
+        android:name="com.example.finalexamabdulmajeedshukayri.Home_Screen"
+        android:label="fragment_home__screen"
+        tools:layout="@layout/fragment_home__screen" >
+        <action
+            android:id="@+id/action_home_Screen_to_search_Fragment"
+            app:destination="@id/search_Fragment" />
+        <action
+            android:id="@+id/action_home_Screen_to_database_Fragment2"
+            app:destination="@id/database_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/search_Fragment"
+        android:name="com.example.finalexamabdulmajeedshukayri.SearchFragment"
+        android:label="fragment_search_"
+        tools:layout="@layout/fragment_search_" >
+        <action
+            android:id="@+id/action_search_Fragment_to_home_Screen"
+            app:destination="@id/home_Screen" />
+    </fragment>
+    <fragment
+        android:id="@+id/database_Fragment"
+        android:name="com.example.finalexamabdulmajeedshukayri.Database_Fragment"
+        android:label="fragment_database_"
+        tools:layout="@layout/fragment_database_" >
+        <action
+            android:id="@+id/action_database_Fragment_to_home_Screen"
+            app:destination="@id/home_Screen" />
+    </fragment>
+</navigation>
